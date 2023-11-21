@@ -112,7 +112,7 @@ public class InputMapper {
     private Map<JoystickAxis,DeviceAxis> joystickAxisMap = new HashMap<>();
     private Map<JoystickButton,DeviceButton> joystickButtonMap = new HashMap<>();
 
-    private Map<FunctionId, FunctionListeners> listenerMap = new HashMap<>();
+    public Map<FunctionId, FunctionListeners> listenerMap = new HashMap<>();
 
     private double tpf = 0;
     private long lastFrameNanos;
@@ -574,7 +574,7 @@ public class InputMapper {
         }
     }
 
-    protected class FunctionListeners {
+    public class FunctionListeners {
 
         SafeArrayList<StateFunctionListener> stateListeners
                 = new SafeArrayList<StateFunctionListener>(StateFunctionListener.class);
